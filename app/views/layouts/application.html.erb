@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Devise" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
+<head>
+  <title>Heart and Soul</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Heart and Soul: Delicious Gluten and Wheat Free Food! <%= image_tag("logo.jpg") %></h1>
+
+    </div> 
+
+    <%= render 'layouts/navigation' %>
+
+    
+      <%= render 'layouts/messages' %>
+      <%= yield %>  
+
+  <footer class="footer-custom">
+        <div class="container">
+          <p>Contact Us:
+          <br> 
+          Phone number: (443)266-7267
+          <br>
+          Location: Towson, Maryland
+          <br>
+          Hours of Operation: 11-10 Weekdays, 9-10 Saturdays, closed Sundays
+          </p>
+        </div>
+      </footer>
+      
+  </div>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
 </html>

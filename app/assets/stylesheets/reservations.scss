@@ -1,0 +1,13 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.table {
+	color: rgb(238, 178, 0);
+	background-color: rgba(153,0,0,0.75);
+	border-radius: 15px;
+}
+
+tbody td {
+	background-color: rgba(153, 0, 0, 0.75);
+	color: rgb(255,255,255);
+}

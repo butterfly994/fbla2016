@@ -3,7 +3,7 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face{
+	font-family: 'Asiago';
+	src: url('Asiago.ttf');
+}
+
+
+body {
+	font-family: 'Asiago', 'Georgia', serif;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    color: rgb(255,255,255);
+}
+
+
+
+.navbar-default {
+	margin-bottom: 50px;
+	background-color: rgb(128, 0, 0);
+	border-color: rgb(128, 0, 0);
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: rgb(255,255,255);
+	
+}
+
+.navbar-default .navbar-nav {
+	border-radius: 25px;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgb(153, 0, 0);
+    color:  rgb(255,255,255);
+}
+
+.navbar-default .navbar-nav li.active a {
+	background-color: rgb(153,0,0);
+	color: rgb(255,255,255);
+}
+
+.navbar-default .navbar-header > .navbar-brand {
+	color: rgb(238, 178, 0);
+}
+
+.well {
+	background-color: rgba(153, 0, 0, .5);
+	border-color: rgb(153,0,0);
+}
+
+#collapse-btn {
+	border-color: rgb(153,0,0);
+}
+
+#collapse-btn:hover {
+	background-color: rgb(153,0,0);
+}
+
+#collapse-btn:focus{
+	background-color: rgb(153,0,0);
+}
+
+.carousel-control {
+	border-radius: 10px;
+}
+
+
+.footer-custom {
+	padding-top: 10px;
+	background-color: rgba(128,0,0,.75);
+  	border-radius: 5px;
+}
+
+.btn-primary {
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-color: rgb(204, 153, 0);
+    background:rgb(238, 178, 0);
+    color: rgb(255,255,255);
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	border-color: rgb(255,200,50);
+	background: rgb(255, 200, 50);
+	color: rgb(255,255, 255);
+}

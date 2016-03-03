@@ -1,0 +1,28 @@
+<h1>Reservations</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>TOA</th>
+        <th>Date</th>
+        <th>Party</th>
+        <th>Name</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @reservations.exists? %>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <td><%= reservation.arrival %></td>
+            <td><%= reservation.date %></td>
+            <td><%= reservation.party %></td>
+            <td><%= reservation.name %></td>
+            <td><%= reservation.phone %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

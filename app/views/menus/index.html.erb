@@ -1,0 +1,20 @@
+<h1>Menus</h1>
+
+<% if @menus.exists? %>
+
+  <% @menus.each do |menu| %>
+  <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading"><%= menu.name %></h2>
+        <p class="lead"><%= menu.description %> </p>
+        <%= link_to "See Full", menus_show_path, class: "btn btn-primary" %> 
+      </div>
+    </div>
+
+  <% end %>
+
+<% end %>
+      
+<%= will_paginate %>

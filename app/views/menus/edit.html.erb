@@ -1,0 +1,21 @@
+
+<div class="well center-block">
+	<h2>Edit Menu</h2>
+
+	<%= bootstrap_form_for @menu do |f| %>
+
+		<div class="row">
+			<div class="col-lg-4">
+				<%= f.text_field :name, label: "Menu Name" %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-10">
+				<%= f.text_area :description, label: "Menu Description" %>
+			</div>
+		</div>
+
+		<%= f.submit class: "btn btn-primary" %>
+	<% end %>
+</div>

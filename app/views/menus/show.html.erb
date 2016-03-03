@@ -1,0 +1,24 @@
+	<div class="jumbotron">
+	      <div class="container">
+	        <h1><%= @menu.name %></h1>
+	        <p><%= @menu.description %> It's Terrific!!</p>
+	      </div>
+	</div>
+
+   	<div class="container" id="items">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <% @items.each do |item| %>
+            <% if item.menu == @menu.name %>
+              <h2><%= item.name %></h2>
+              <p><%= item.descrip %></p>
+              <hr>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      
+    </div>
+
+    

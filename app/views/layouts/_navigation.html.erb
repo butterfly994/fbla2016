@@ -1,20 +1,46 @@
-<%# navigation styled for Bootstrap 3.0 %>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <%= render 'layouts/navigation_links' %>
-        <%= render 'layouts/nav_links_for_auth' %>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Navbar ================================================== -->
+    <div class="navbar-wrapper">
+    <div class="container-fluid">
+    <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="collapse-btn">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <%= link_to "Home", root_path,  class: "navbar-brand"%>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li><%= link_to 'About Us/FAQs', about_show_path %></li>
+                <li><%= link_to 'Menus', menus_index_path %></li>
+                <li><%= link_to 'Make A Reservation', reservations_new_path %></li>
+
+                <% if user_signed_in? %>
+                  <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                  <li><%= link_to 'View Account Information', customers_show_path %></li>
+                  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                <% else %>
+                  <li><%= link_to 'Sign in', new_user_session_path %></li>
+                  <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                  <li><%= link_to 'Owner Sign in', new_admin_session_path %></li>
+                  <li><%= link_to 'Admin Sign Up', new_admin_registration_path %></li>
+                <% end %>
+                <% if admin_signed_in? %>
+                  <li><%= link_to 'Reservations', reservations_index_path %></li>
+                  <li><%= link_to 'Make a New Item', items_new_path %></li>
+                  <li><%= link_to 'Make a New Menu', menus_new_path %></li>
+                  <li><%= link_to 'Edit a Menu', menus_edit_path %></li>
+                  <li><%= link_to 'Sign out', destroy_admin_session_path, :method=>'delete' %> </li>
+                <% end %>
+                  
+              </ul>
+            </div>
+          </div>
+        </nav>  
+      </div>
+      </div>

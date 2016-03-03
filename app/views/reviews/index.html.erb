@@ -1,0 +1,26 @@
+<h1>Reviews</h1>
+
+<% if @reviews.exists? %>
+
+  <% @reviews.each do |review| %>
+    <div class="panel panel-custom">
+      <div class="panel-heading">
+        <h2 class="panel-title"><%= review.title %></h2>
+      </div>
+      <div class="panel-body">
+  	   <h5>Score: 
+        <% if review.rating == 0 %>
+          <span class="glyphicon glyphicon-star-empty" aria-hidden="true">(Would Not Come Again)</span>
+        <% else %>
+         <span class="glyphicon glyphicon-star" aria-hidden="true">(Would Come Again)</span>
+        <% end %>
+       </h5>
+
+        <%= review.body %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= will_paginate %>
+
+<% end %> 

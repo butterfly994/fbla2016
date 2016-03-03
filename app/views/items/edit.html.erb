@@ -1,0 +1,21 @@
+
+<div class="well center-block">
+	<h2>Edit Item</h2>
+
+	<%= bootstrap_form_for @item do |f| %>
+
+		<div class="row">
+			<div class="col-lg-4">
+				<%= f.text_field :name, label: "Item Name" %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-10">
+				<%= f.text_area :description, label: "Item Description" %>
+			</div>
+		</div>
+
+		<%= f.submit class: "btn btn-primary" %>
+	<% end %>
+</div>
