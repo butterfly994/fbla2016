@@ -13,7 +13,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap_form'
 
 gem "will_paginate", '~> 3.0.6'
-gem "devise"
+# gem "devise"
 
 group :development, :test do
   gem 'byebug'
@@ -23,7 +23,7 @@ group :development do
   gem 'spring'
 end
 gem 'bootstrap-sass'
-# gem 'devise'
+gem 'devise'
 gem 'high_voltage'
 group :development do
   gem 'better_errors'
