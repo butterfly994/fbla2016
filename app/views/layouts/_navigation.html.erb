@@ -19,6 +19,7 @@
                 <li><%= link_to 'About Us/FAQs', about_show_path %></li>
                 <li><%= link_to 'Menus', menus_index_path %></li>
                 <li><%= link_to 'Make A Reservation', reservations_new_path %></li>
+                <li><%= link_to 'Write A Review', reviews_new_path %></li>
 
                 <% if user_signed_in? %>
                   <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
