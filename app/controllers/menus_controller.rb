@@ -5,7 +5,7 @@ class MenusController < ApplicationController
   end
 
   def index
-    @menus = Menu.paginate(:page => params[:page], :per_page => 1)
+    @menus = Menu.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
