@@ -23,11 +23,11 @@ Rails.application.routes.draw do
 
   get 'menus/index'
 
-  get 'menus/show'
+  get 'menus/show/:id', to: 'menus#show'
 
     get 'menus/new'
 
-    get 'menus/edit'
+    get 'menus/edit/:id', to: 'menus#edit'
 
     get 'users/show'
 

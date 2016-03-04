@@ -8,8 +8,8 @@ class MenusController < ApplicationController
   end
 
   def show
-    @menu = Menu.find_by(params[:id])
-    @items = @menu.items
+    @menu = Menu.find(params[:id])
+    @items = Item.all
   end
 
   def create
@@ -20,16 +20,16 @@ class MenusController < ApplicationController
   end
 
   def edit
-    @menu = Menu.find_by(params[:id])
+    @menu = Menu.find(params[:id])
   end
 
   def update
-    @menu = Menu.find_by(params[:id])
+    @menu = Menu.find(params[:id])
     @menu.update(menu_params)
   end
 
   def destroy
-    @menu = Menu.find_by(params[:id])
+    @menu = Menu.find(params[:id])
     @menu.destroy
   end
 
