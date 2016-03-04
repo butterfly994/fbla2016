@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   devise_for :admins
   root to: 'about#index'
   devise_for :users
@@ -23,17 +25,7 @@ Rails.application.routes.draw do
 
   get 'menus/show'
 
-
     get 'menus/new'
-
-
-
-    get 'menus/index'
-
-
-    get 'menus/show'
-
-
 
     get 'menus/edit'
 
