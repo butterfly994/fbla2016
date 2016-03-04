@@ -1,7 +1,6 @@
 class MenusController < ApplicationController
   def new
     @menu = Menu.new
-    @items = Item.all
   end
 
   def index
@@ -10,7 +9,7 @@ class MenusController < ApplicationController
 
   def show
     @menu = Menu.find_by(params[:id])
-    @items = Item.all
+    @items = @menu.items
   end
 
   def create
