@@ -1,5 +1,7 @@
 <h1>Reviews</h1>
 
+<%= link_to 'Write Your Own Review', reviews_new_path, class: "btn btn-primary" %>
+
 <% if @reviews.exists? %>
 
   <% @reviews.each do |review| %>
@@ -10,9 +12,9 @@
       <div class="panel-body">
   	   <h5>Score: 
         <% if review.rating == 0 %>
-          <span class="glyphicon glyphicon-star-empty" aria-hidden="true">(Would Not Come Again)</span>
+          <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>(Would Not Come Again)
         <% else %>
-         <span class="glyphicon glyphicon-star" aria-hidden="true">(Would Come Again)</span>
+         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>(Would Come Again)
         <% end %>
        </h5>
 

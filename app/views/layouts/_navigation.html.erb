@@ -21,6 +21,7 @@
                   <li><%= link_to 'Reservations', reservations_index_path %></li>
                   <li><%= link_to 'Make a New Item', items_new_path %></li>
                   <li><%= link_to 'Make a New Menu', menus_new_path %></li>
+                  
                   <li><%= link_to 'Sign out', destroy_admin_session_path, :method=>'delete' %> </li>
                 <% elsif user_signed_in? %>
                   <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
@@ -29,13 +30,9 @@
                 <% else %>
 
                   <li><%= link_to 'Sign in', new_user_session_path %></li>
-                  <li><%= link_to 'Sign up', new_user_registration_path %></li>
-                  <li><%= link_to 'Owner Sign in', new_admin_session_path %></li>
-
                   <li><%= link_to 'Menus', menus_index_path %></li>
                   <li><%= link_to 'Make A Reservation', reservations_new_path %></li>
                   <li><%= link_to 'Reviews', reviews_index_path %></li>
-                  <li><%= link_to 'Write A Review', reviews_new_path %></li>
                   <li><%= link_to 'About Us/FAQs', about_show_path %></li>
 
                 <% end %>

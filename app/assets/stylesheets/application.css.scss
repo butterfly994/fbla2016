@@ -21,15 +21,18 @@
 
 
 body {
-	font-family: 'Asiago', 'Georgia', serif;
+	font-family: 'Asiago';
     background-image: url("background.jpg");
     color: rgb(255,255,255);
 }
 
+h1 {
+	margin-bottom: 15px;
+}
 
 
 .navbar-default {
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 	background-color: rgb(128, 0, 0);
 	border-color: rgb(128, 0, 0);
 }

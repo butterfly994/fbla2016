@@ -23,9 +23,11 @@
   <div class="actions">
     <%= f.submit "Log in", class: "btn btn-primary"  %>
   </div>
+
 <% end %>
 
-
-<%= render "users/shared/links" %>
+  <%= link_to 'Don\'t have an account already?', new_user_registration_path %>
+  <br>
+ <%= link_to 'Are you the owner?', new_admin_session_path %>
 
 </div>
